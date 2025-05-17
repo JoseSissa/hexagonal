@@ -8,13 +8,13 @@ export class User {
     id: UserId;
     name: UserName;
     email: UserEmail;
-    createsAt: UserCreatedAt;
+    createdAt: UserCreatedAt;
 
-    constructor(id: UserId, name: UserName, email: UserEmail, createsAt: UserCreatedAt) {
+    constructor(id: UserId, name: UserName, email: UserEmail, createdAt: UserCreatedAt) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.createsAt = createsAt;
+        this.createdAt = createdAt;
     }
 
     // Métodos servicios de dominio porque no depende ni de app ni de infraestructura
