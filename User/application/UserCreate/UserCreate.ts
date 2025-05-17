@@ -8,12 +8,12 @@ import { UserCreatedAt } from "../../domain/UserCreatedAt";
 export class UserCreate {
     constructor(private repository: UserRepository) {}
 
-    async run(id: string, name: string, email: string, createsAt: string): Promise<void> {
+    async run(id: string, name: string, email: string, createsAt: Date): Promise<void> {
         const user = new User(
             new UserId(id), 
             new UserName(name), 
             new UserEmail(email), 
-            new UserCreatedAt(new Date(createsAt))
+            new UserCreatedAt(createsAt)
         );
 
         return this.repository.create(user);

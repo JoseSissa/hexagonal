@@ -1,14 +1,14 @@
 export class UserEmail {
-    vale: string;
+    value: string;
 
-    constructor(vale: string) {
-        this.vale = vale;
+    constructor(value: string) {
+        this.value = value;
         this.ensureIsValid();
     }
 
     // Validamos que el email sea valido, ya depende del requerimiento
     private ensureIsValid() {
-        if(!this.vale.includes('@')) {
+        if(!this.value.includes('@')) {
             throw new Error("UserEmail must be a valid email");
         }
     }
